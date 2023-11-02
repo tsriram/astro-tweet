@@ -13,7 +13,7 @@
     "astro-component"
   ],
   "scripts": {
-    "format": "prettier --write ."
+    "format": "prettier --write . --plugin=prettier-plugin-astro"
   },
   "devDependencies": {
     "astro": "^3.4.0",

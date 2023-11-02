@@ -3,7 +3,7 @@ import clsx from "clsx";
 import {
   type EnrichedTweet,
   type EnrichedQuotedTweet,
-  getMediaUrl
+  getMediaUrl,
 } from "../utils.js";
 import { type MediaDetails } from "../api/index";
 import type { TwitterComponents } from "./types.js";
@@ -25,7 +25,7 @@ const getSkeletonStyle = (media: MediaDetails, itemCount: number) => {
 
   return {
     width: media.type === "photo" ? undefined : "unset",
-    paddingBottom: `${paddingBottom}%`
+    paddingBottom: `${paddingBottom}%`,
   };
 };
 interface Props {
@@ -44,7 +44,7 @@ const Img = components?.MediaImg ?? MediaImg;
       styles.mediaWrapper,
       length > 1 && styles.grid2Columns,
       length === 3 && styles.grid3,
-      length > 4 && styles.grid2x2
+      length > 4 && styles.grid2x2,
     )}
   >
     {
