@@ -10,7 +10,10 @@
     "index.ts"
   ],
   "keywords": [
-    "astro-component"
+    "astro-component",
+    "withastro",
+    "astro",
+    "twitter"
   ],
   "scripts": {
     "format": "prettier --write . --plugin=prettier-plugin-astro"
