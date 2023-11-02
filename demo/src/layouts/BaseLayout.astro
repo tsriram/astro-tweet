@@ -1,0 +1,25 @@
+---
+const isProduction = import.meta.env.PROD;
+---
+
+<!doctype html>
+<html>
+  <head>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <title>astro-tweet Demo</title>
+  </head>
+  <body class="bg-light-bg text-light-text dark:bg-dark-bg dark:text-dark-text flex flex-col items-center">
+    <main class="flex flex-col items-center mt-8">
+      <slot />
+    </main>
+    <footer class="text-sm mt-12">
+      Built by <a class="dark:text-pink-500 light:text-blue-700" href="https://twitter.com/tsriram" target="_blank">Sriram</a>
+    </footer>
+  </body>
+</html>

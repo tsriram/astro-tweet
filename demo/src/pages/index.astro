@@ -1,35 +1,26 @@
 ---
 import AstroTweet from "astro-tweet";
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body>
-    <a href="https://github.com/tsriram/astro-tweet">
-      <h1>astro-tweet</h1>
-    </a>
+<BaseLayout>
+  <h1>
+    <a
+      class="dark:text-pink-500 light:text-blue-700"
+      href="https://github.com/tsriram/astro-tweet"
+      target="_blank"
+    >
+      astro-tweet</a
+    > Demo
+  </h1>
 
-    <!-- Tweet with photo -->
-    <!-- <AstroTweet id="1695737974808596731" /> -->
-    <!-- Quoted tweet -->
-    <!-- <AstroTweet id="1717896973838360890" /> -->
-    <!-- Tweet with video -->
-    <!-- <AstroTweet id="1719392950545719424" /> -->
-    <!-- Test tweet ;-) -->
-    <AstroTweet id="1713443573168034170" />
-  </body>
-</html>
-
-<style>
-  body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-</style>
+  <!-- Tweet with photo -->
+  <!-- <AstroTweet id="1695737974808596731" /> -->
+  <!-- Quoted tweet -->
+  <!-- <AstroTweet id="1717896973838360890" /> -->
+  <!-- Tweet with video -->
+  <!-- <AstroTweet id="1719392950545719424" /> -->
+  <!-- Test tweet ;-) -->
+  <AstroTweet id="1713443573168034170" />
+  <div class="text-xs text-gray-200">This tweet was statically generated.</div>
+</BaseLayout>
