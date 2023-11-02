@@ -1,18 +1,18 @@
 export interface TweetVideo {
-  aspectRatio: [number, number]
-  contentType: string
-  durationMs: number
+  aspectRatio: [number, number];
+  contentType: string;
+  durationMs: number;
   mediaAvailability: {
-    status: string
-  }
-  poster: string
+    status: string;
+  };
+  poster: string;
   variants: {
-    type: string
-    src: string
-  }[]
+    type: string;
+    src: string;
+  }[];
   videoId: {
-    type: string
-    id: string
-  }
-  viewCount: number
+    type: string;
+    id: string;
+  };
+  viewCount: number;
 }

@@ -43,7 +43,7 @@
   box-sizing: border-box;
 }
 
-:is([data-theme='light'], .light) :where(.react-tweet-theme),
+:is([data-theme="light"], .light) :where(.react-tweet-theme),
 :where(.react-tweet-theme) {
   --tweet-skeleton-gradient: linear-gradient(
     270deg,
@@ -53,7 +53,7 @@
     #fafafa
   );
   --tweet-border: 1px solid rgb(207, 217, 222);
-  --tweet-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+  --tweet-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Helvetica, Arial, sans-serif;
   --tweet-font-color: rgb(15, 20, 25);
   --tweet-font-color-secondary: rgb(83, 100, 113);
@@ -73,7 +73,7 @@
   --tweet-verified-blue-color: var(--tweet-color-blue-primary);
 }
 
-:is([data-theme='dark'], .dark) :where(.react-tweet-theme) {
+:is([data-theme="dark"], .dark) :where(.react-tweet-theme) {
   --tweet-skeleton-gradient: linear-gradient(
     270deg,
     #15202b,
@@ -82,7 +82,7 @@
     rgb(21, 32, 43)
   );
   --tweet-border: 1px solid rgb(66, 83, 100);
-  --tweet-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+  --tweet-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Helvetica, Arial, sans-serif;
   --tweet-font-color: rgb(247, 249, 249);
   --tweet-font-color-secondary: rgb(139, 152, 165);
@@ -112,7 +112,7 @@
       rgb(21, 32, 43)
     );
     --tweet-border: 1px solid rgb(66, 83, 100);
-    --tweet-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    --tweet-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
       Helvetica, Arial, sans-serif;
     --tweet-font-color: rgb(247, 249, 249);
     --tweet-font-color-secondary: rgb(139, 152, 165);
