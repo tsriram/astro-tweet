@@ -1,35 +1,44 @@
-# Astro Starter Kit: Component Package
+# astro-tweet
 
-This is a template for an Astro component library. Use this template for writing components to use in multiple projects or publish to NPM.
+Embed tweets in your Astro sites with zero JavaScript on the client side. This
+is a (slightly opinionated) port of the fantastic
+[react-tweet](https://github.com/vercel/react-tweet) library. Huge thanks to
+Vercel and all the contributors of react-tweet.
 
-```sh
-npm create astro@latest -- --template component
+HTML for the tweets are generated at the build time and there is no JavaScript
+bundled. This uses Twitter's
+
+## How to use?
+
+In your Astro component:
+
+```js
+---
+import Tweet from "astro-tweet";
+---
+
+<Tweet id="1713443573168034170" />
+
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/non-html-pages)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/non-html-pages)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/component/devcontainer.json)
+Where `id` is the tweet ID. For example, in
+https://twitter.com/tsriram/1713443573168034170, `1713443573168034170` is the
+ID.
 
-## 🚀 Project Structure
+id - string: the tweet ID. For example in
+https://twitter.com/chibicode/status/1629307668568633344 the tweet ID
+is 1629307668568633344.
 
-Inside of your Astro project, you'll see the following folders and files:
+This also works with MDX files in Astro.
 
-```text
-/
-├── index.ts
-├── src
-│   └── MyComponent.astro
-├── tsconfig.json
-├── package.json
-```
+### Major changes from react-tweet
 
-The `index.ts` file is the "entry point" for your package. Export your components in `index.ts` to make them importable from your package.
+This library ports almost all of the features of
+[react-tweet](https://github.com/vercel/react-tweet) except the below. These are
+mainly omitted since they'd require adding client side JavaScript but the
+features are probably not "must haves" IMO. This may change in the future.
 
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command       | Action                                                                                                                                                                                                                           |
-| :------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `npm link`    | Registers this package locally. Run `npm link my-component-library` in an Astro project to install your components                                                                                                               |
-| `npm publish` | [Publishes](https://docs.npmjs.com/creating-and-publishing-unscoped-public-packages#publishing-unscoped-public-packages) this package to NPM. Requires you to be [logged in](https://docs.npmjs.com/cli/v8/commands/npm-adduser) |
+1. `Copy link` option (rendered next to likes & reply) is not available.
+2. Video player doesn't have custom play button rendered in the center of the
+   video element (like it does in twitter apps). Instead you get a native HTML
+   video element.
