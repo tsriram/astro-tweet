@@ -10,6 +10,7 @@ import type { TwitterComponents } from "./types.js";
 // import { TweetMediaVideo } from "./TweetMediaVideo.astro";
 import MediaImg from "./MediaImg.astro";
 import styles from "./tweet-media.module.css";
+import TweetMediaVideo from "./TweetMediaVideo.astro";
 
 const getSkeletonStyle = (media: MediaDetails, itemCount: number) => {
   let paddingBottom = 56.25; // default of 16x9
@@ -73,7 +74,7 @@ const Img = components?.MediaImg ?? MediaImg;
                 class={styles.skeleton}
                 style={getSkeletonStyle(media, length)}
               />
-              {/* <TweetMediaVideo tweet={tweet} media={media} /> */}
+              <TweetMediaVideo tweet={tweet} media={media} />
             </div>
           )}
         </Fragment>
