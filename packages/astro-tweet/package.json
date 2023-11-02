@@ -22,6 +22,7 @@
   "dependencies": {
     "@astrojs/check": "^0.2.1",
     "clsx": "^2.0.0",
+    "date-fns": "^2.30.0",
     "typescript": "^5.2.2"
   }
 }

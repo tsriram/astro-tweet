@@ -1,0 +1,29 @@
+---
+import { type TwitterComponents } from "./twitter-theme/components.js";
+// import { id } from "date-fns/locale";
+import type { TweetCoreProps } from "./utils";
+import TweetContent from "./TweetContent.astro";
+
+// export type TweetProps = Omit<TweetCoreProps, "id"> & {
+//   components?: TwitterComponents;
+//   fetchOptions?: RequestInit;
+// } & (
+//     | {
+//         id: string;
+//         apiUrl?: string;
+//       }
+//     | {
+//         id?: string;
+//         apiUrl: string | undefined;
+//       }
+//   );
+// type TweetContentProps = Omit<TweetProps, "fallback">;
+interface Props {
+  id: string;
+  component?: TwitterComponents;
+  fetchOptions?: RequestInit;
+  onError?: ((error: any) => any) | undefined;
+}
+---
+
+<TweetContent {...Astro.props} />
