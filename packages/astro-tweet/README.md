@@ -42,3 +42,9 @@ features are probably not "must haves" IMO. This may change in the future.
 2. Video player doesn't have custom play button rendered in the center of the
    video element (like it does in twitter apps). Instead you get a native HTML
    video element.
+
+## Running demo locally
+
+1. Clone the repo
+2. Run `pnpm install` from the project directory
+3. Run `pnpm dev` from the `demo` directory
