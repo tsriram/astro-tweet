@@ -12,9 +12,13 @@
   "keywords": [
     "astro-component"
   ],
-  "scripts": {},
+  "scripts": {
+    "format": "prettier --write ."
+  },
   "devDependencies": {
-    "astro": "^3.4.0"
+    "astro": "^3.4.0",
+    "prettier": "^3.0.3",
+    "prettier-plugin-astro": "^0.12.1"
   },
   "peerDependencies": {
     "astro": "^3.0.0"
