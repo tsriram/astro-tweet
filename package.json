@@ -6,8 +6,8 @@
   "scripts": {
     "check": "pnpm -r prepublishOnly && pnpm -r check",
     "format": "pnpm -r format",
-    "changeset:version": "changeset version && pnpm -r generate:version && git add --all",
-		"changeset:release": "changeset publish"
+    "changeset:version": "pnpm changeset version && pnpm -r generate:version && git add --all",
+    "changeset:release": "pnpm changeset publish"
   },
   "keywords": [],
   "author": "Sriram Thiagarajan",
@@ -15,5 +15,8 @@
   "engines": {
     "pnpm": "^8.10.0"
   },
-  "packageManager": "pnpm@8.10.0"
+  "packageManager": "pnpm@8.10.0",
+  "dependencies": {
+    "@changesets/cli": "^2.26.2"
+  }
 }

@@ -1,6 +1,6 @@
 {
   "name": "astro-tweet",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "type": "module",
   "exports": {
     ".": "./index.ts"
@@ -28,7 +28,6 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.2.1",
-    "@changesets/cli": "^2.26.2",
     "clsx": "^2.0.0",
     "date-fns": "^2.30.0",
     "typescript": "^5.2.2"
