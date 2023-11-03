@@ -4,9 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "check": "pnpm -r prepublishOnly && pnpm -r check",
+    "format": "pnpm -r format",
+    "changeset:version": "changeset version && pnpm -r generate:version && git add --all",
+		"changeset:release": "changeset publish"
   },
   "keywords": [],
   "author": "Sriram Thiagarajan",
-  "license": "ISC"
+  "license": "ISC",
+  "engines": {
+    "pnpm": "^8.10.0"
+  },
+  "packageManager": "pnpm@8.10.0"
 }
