@@ -5,6 +5,7 @@ on:
     branches:
       - main
 
+permissions: {}
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
@@ -12,6 +13,7 @@ jobs:
     name: Release
     permissions:
       contents: write
+      pull-requests: write
 
     if: ${{ github.repository_owner == 'tsriram' }}
     runs-on: ubuntu-latest
@@ -37,8 +39,8 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
-          version: pnpm changeset version
           publish: pnpm changeset publish
+          version: pnpm changeset version
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
