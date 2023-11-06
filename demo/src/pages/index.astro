@@ -11,7 +11,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       target="_blank"
     >
       astro-tweet</a
-    > demo
+    > static page demo
   </h1>
 
   <!-- Tweet with photo -->
@@ -22,5 +22,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   <!-- <AstroTweet id="1719392950545719424" /> -->
   <!-- Test tweet ;-) -->
   <AstroTweet id="1713443573168034170" />
-  <div class="text-xs text-gray-200">This tweet was statically generated.</div>
+  <div class="text-xs text-gray-200">
+    This tweet was statically generated. For a demo of server rendered page,
+    visit <a href="/tweet/20" class="dark:text-pink-500 light:text-blue-700"
+      >this page</a
+    >
+  </div>
 </BaseLayout>
