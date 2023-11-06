@@ -20,5 +20,6 @@
     "astro-tweet": "workspace:*",
     "tailwindcss": "^3.0.24",
     "typescript": "^5.2.2"
-  }
+  },
+  "packageManager": "pnpm@8.10.0"
 }
