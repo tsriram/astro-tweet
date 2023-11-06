@@ -1,4 +1,4 @@
-.react-tweet-theme {
+.astro-tweet-theme {
   --tweet-container-margin: 1.5rem 0;
 
   /* Header */
@@ -37,14 +37,14 @@
   --tweet-replies-font-weight: 700;
 }
 
-:where(.react-tweet-theme) * {
+:where(.astro-tweet-theme) * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-:is([data-theme="light"], .light) :where(.react-tweet-theme),
-:where(.react-tweet-theme) {
+:is([data-theme="light"], .light) :where(.astro-tweet-theme),
+:where(.astro-tweet-theme) {
   --tweet-skeleton-gradient: linear-gradient(
     270deg,
     #fafafa,
@@ -73,7 +73,7 @@
   --tweet-verified-blue-color: var(--tweet-color-blue-primary);
 }
 
-:is([data-theme="dark"], .dark) :where(.react-tweet-theme) {
+:is([data-theme="dark"], .dark) :where(.astro-tweet-theme) {
   --tweet-skeleton-gradient: linear-gradient(
     270deg,
     #15202b,
@@ -103,7 +103,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :where(.react-tweet-theme) {
+  :where(.astro-tweet-theme) {
     --tweet-skeleton-gradient: linear-gradient(
       270deg,
       #15202b,
