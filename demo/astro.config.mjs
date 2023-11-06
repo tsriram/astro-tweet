@@ -1,9 +1,11 @@
+import vercel from "@astrojs/vercel/serverless";
 import { defineConfig } from "astro/config";
-import mdx from "@astrojs/mdx";
-
 import tailwind from "@astrojs/tailwind";
+import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [mdx(), tailwind()]
+  integrations: [mdx(), tailwind()],
+  adapter: vercel(),
+  output: "hybrid"
 });

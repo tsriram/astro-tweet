@@ -10,7 +10,7 @@ interface Props {
 const { className } = Astro.props;
 ---
 
-<div class={clsx("react-tweet-theme", styles.root, className)}>
+<div class={clsx("astro-tweet-theme", styles.root, className)}>
   <article class={styles.article}>
     <slot />
   </article>
