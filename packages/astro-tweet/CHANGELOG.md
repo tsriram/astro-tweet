@@ -1,5 +1,11 @@
 # astro-tweet
 
+## 0.0.3
+
+### Patch Changes
+
+- ebcb65a: fix issue with filename case in git that was blocking the build
+
 ## 0.0.2
 
 ### Patch Changes
