@@ -1,0 +1,22 @@
+---
+export const prerender = false;
+const { id } = Astro.params;
+import Tweet from "astro-tweet";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+  <h1>
+    <a
+      class="dark:text-pink-500 light:text-blue-700"
+      href="https://github.com/tsriram/astro-tweet"
+      target="_blank"
+    >
+      astro-tweet</a
+    > Demo
+  </h1>
+  <Tweet id={id || "20"} />
+  <div class="text-xs text-gray-200">
+    This tweet was rendered on the server.
+  </div>
+</BaseLayout>
