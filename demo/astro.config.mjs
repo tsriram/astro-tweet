@@ -1,4 +1,4 @@
-import vercel from "@astrojs/vercel/serverless";
+import cloudflare from "@astrojs/cloudflare";
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import mdx from "@astrojs/mdx";
@@ -6,6 +6,6 @@ import mdx from "@astrojs/mdx";
 // https://astro.build/config
 export default defineConfig({
   integrations: [mdx(), tailwind()],
-  adapter: vercel(),
+  adapter: cloudflare(),
   output: "hybrid"
 });
