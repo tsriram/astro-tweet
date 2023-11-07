@@ -69,18 +69,20 @@ export async function getTweet(
   try {
     const res = await fetch(url.toString(), fetchOptions);
     console.log("res: ", JSON.stringify(res));
+    const isJson = res.headers
+      .get("content-type")
+      ?.includes("application/json");
+    const data = isJson ? await res.json() : undefined;
+
+    if (res.ok) return data;
+    if (res.status === 404) return;
+
+    throw new TwitterApiError({
+      message: typeof data?.error === "string" ? data.error : "Bad request.",
+      status: res.status,
+      data
+    });
   } catch (error) {
     console.log("error from twitter api: ", error);
   }
-  const isJson = res.headers.get("content-type")?.includes("application/json");
-  const data = isJson ? await res.json() : undefined;
-
-  if (res.ok) return data;
-  if (res.status === 404) return;
-
-  throw new TwitterApiError({
-    message: typeof data?.error === "string" ? data.error : "Bad request.",
-    status: res.status,
-    data
-  });
 }
