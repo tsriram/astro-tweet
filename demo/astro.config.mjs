@@ -7,5 +7,5 @@ import mdx from "@astrojs/mdx";
 export default defineConfig({
   integrations: [mdx(), tailwind()],
   adapter: cloudflare(),
-  output: "hybrid"
+  output: "server"
 });
