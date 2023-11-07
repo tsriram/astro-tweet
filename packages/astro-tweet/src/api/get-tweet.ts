@@ -66,8 +66,12 @@ export async function getTweet(
   );
   url.searchParams.set("token", getToken(id));
 
-  const res = await fetch(url.toString(), fetchOptions);
-  console.log("res: ", JSON.stringify(res));
+  try {
+    const res = await fetch(url.toString(), fetchOptions);
+    console.log("res: ", JSON.stringify(res));
+  } catch (error) {
+    console.log("error from twitter api: ", error);
+  }
   const isJson = res.headers.get("content-type")?.includes("application/json");
   const data = isJson ? await res.json() : undefined;
 
