@@ -67,7 +67,10 @@ export async function getTweet(
   url.searchParams.set("token", getToken(id));
 
   try {
-    const res = await fetch(url.toString(), fetchOptions);
+    const res = await fetch(url.toString(), {
+      ...fetchOptions,
+      cache: "no-cache"
+    });
     console.log("res: ", JSON.stringify(res));
     const isJson = res.headers
       .get("content-type")
