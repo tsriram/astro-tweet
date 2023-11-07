@@ -9,7 +9,7 @@ export class TwitterApiError extends Error {
   constructor({
     message,
     status,
-    data,
+    data
   }: {
     message: string;
     status: number;
@@ -35,7 +35,7 @@ function getToken(id: string) {
  */
 export async function getTweet(
   id: string,
-  fetchOptions?: RequestInit,
+  fetchOptions?: RequestInit
 ): Promise<Tweet | undefined> {
   if (id.length > 40 || !TWEET_ID.test(id)) {
     throw new Error(`Invalid tweet id: ${id}`);
@@ -61,12 +61,13 @@ export async function getTweet(
       "tfw_legacy_timeline_sunset:true",
       "tfw_show_gov_verified_badge:on",
       "tfw_show_business_affiliate_badge:on",
-      "tfw_tweet_edit_frontend:on",
-    ].join(";"),
+      "tfw_tweet_edit_frontend:on"
+    ].join(";")
   );
   url.searchParams.set("token", getToken(id));
 
   const res = await fetch(url.toString(), fetchOptions);
+  console.log("res: ", res);
   const isJson = res.headers.get("content-type")?.includes("application/json");
   const data = isJson ? await res.json() : undefined;
 
@@ -74,8 +75,8 @@ export async function getTweet(
   if (res.status === 404) return;
 
   throw new TwitterApiError({
-    message: typeof data.error === "string" ? data.error : "Bad request.",
+    message: typeof data?.error === "string" ? data.error : "Bad request.",
     status: res.status,
-    data,
+    data
   });
 }
