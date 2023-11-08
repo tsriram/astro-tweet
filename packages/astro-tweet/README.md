@@ -28,8 +28,8 @@ import Tweet from "astro-tweet";
 ```
 
 Where `id` is the tweet ID. For example, in
-https://twitter.com/tsriram/1713443573168034170, `1713443573168034170` is the
-ID.
+https://twitter.com/tsriram/status/1713443573168034170, `1713443573168034170` is
+the ID.
 
 This also works with MDX files in Astro.
 
