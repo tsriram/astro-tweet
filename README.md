@@ -38,7 +38,8 @@ This also works with MDX files in Astro.
 This library ports almost all of the features of
 [react-tweet](https://github.com/vercel/react-tweet) except the below. These are
 mainly omitted since they'd require adding client side JavaScript but the
-features are probably not "must haves" IMO. This may change in the future.
+features are probably not "must haves" IMO. This may change in the future. If
+you'd like these changed, please create an issue to discuss.
 
 1. `Copy link` option (rendered next to likes & reply) is not available.
 2. Video player doesn't have custom play button rendered in the center of the
@@ -50,3 +51,8 @@ features are probably not "must haves" IMO. This may change in the future.
 1. Clone the repo
 2. Run `pnpm install` from the project directory
 3. Run `pnpm dev` from the `demo` directory
+
+## Contributing
+
+All kinds of contributions are welcome. For code contributions / local setup,
+please check [CONTRIBUTING.md](CONTRIBUTING.md)

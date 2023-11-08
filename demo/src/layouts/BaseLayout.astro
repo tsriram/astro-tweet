@@ -1,5 +1,5 @@
 ---
-const isProduction = import.meta.env.PROD;
+import Header from "../components/Header.astro";
 ---
 
 <!doctype html>
@@ -12,20 +12,63 @@ const isProduction = import.meta.env.PROD;
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <meta name="generator" content={Astro.generator} />
+    <meta property="og:title" content="astro-tweet demo" />
+    <meta
+      property="og:description"
+      content="astro-tweet is a library to render tweets to static HTML without any client side JavaScript in your Astro projects"
+    />
+    <meta
+      name="og:image"
+      content="https://astro-tweet-demo.vercel.app/social.png"
+    />
+    <meta property="og:url" content="https://astro-tweet-demo.vercel.app" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta
+      name="description"
+      content="astro-tweet is a library to render tweets to static HTML without any client side JavaScript in your Astro projects"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <meta property="twitter:title" content="astro-tweet demo" />
+    <meta
+      property="twitter:description"
+      content="astro-tweet is a library to render tweets to static HTML without any client side JavaScript in your Astro projects"
+    />
+
+    <meta name="twitter:site" content="@tsriram" />
+    <meta
+      name="twitter:image"
+      content="https://astro-tweet-demo.vercel.app/social.png"
+    />
+    <meta name="theme-color" content="#243447" />
+    <meta
+      name="keywords"
+      content="astro twitter embed, astro static tweet, twitter static embed"
+    />
     <title>astro-tweet Demo</title>
   </head>
   <body
-    class="bg-light-bg text-light-text dark:bg-dark-bg dark:text-dark-text flex flex-col items-center"
+    class="bg-light-bg text-light-text dark:bg-dark-bg dark:text-dark-text flex flex-col items-center p-8"
   >
     <main class="flex flex-col items-center mt-8 w-full">
+      <Header />
       <slot />
     </main>
-    <footer class="text-sm mt-12">
-      Built by <a
-        class="dark:text-pink-500 light:text-blue-700"
-        href="https://twitter.com/tsriram"
-        target="_blank">Sriram</a
-      >
+    <footer class="flex flex-col items-center gap-4 mt-12">
+      <div>
+        The source code is available on <a
+          class="dark:text-pink-500 text-blue-700"
+          href="https://github.com/tsriram/astro-tweet">GitHub</a
+        >
+      </div>
+      <div>
+        Built by <a
+          class="dark:text-pink-500 text-blue-700"
+          href="https://twitter.com/tsriram"
+          target="_blank">Sriram</a
+        >
+      </div>
     </footer>
   </body>
 </html>

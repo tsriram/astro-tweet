@@ -6,7 +6,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 <BaseLayout>
   <h1>
     <a
-      class="dark:text-pink-500 light:text-blue-700"
+      class="dark:text-pink-500 text-blue-700"
       href="https://github.com/tsriram/astro-tweet"
       target="_blank"
     >
@@ -20,12 +20,14 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   <!-- <AstroTweet id="1717896973838360890" /> -->
   <!-- Tweet with video -->
   <!-- <AstroTweet id="1719392950545719424" /> -->
-  <!-- Test tweet ;-) -->
-  <AstroTweet id="1713443573168034170" />
-  <div class="text-xs text-gray-200">
+  <AstroTweet id="20" />
+  <div class="text-sm dark:text-gray-200 text-gray-700">
     This tweet was statically generated. For a demo of server rendered page,
-    visit <a href="/tweet/20" class="dark:text-pink-500 light:text-blue-700"
-      >this page</a
+    visit <a href="/tweet/20" class="dark:text-pink-500 text-blue-700"
+      >this page.</a
     >
+     Also works with <a href="/mdx" class="dark:text-pink-500 text-blue-700"
+      >MDX</a
+    >.
   </div>
 </BaseLayout>
