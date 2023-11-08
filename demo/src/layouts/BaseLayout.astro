@@ -1,5 +1,6 @@
 ---
 import Header from "../components/Header.astro";
+const isProd = import.meta.env.PROD;
 ---
 
 <!doctype html>
@@ -70,5 +71,15 @@ import Header from "../components/Header.astro";
         >
       </div>
     </footer>
+    <!-- Cloudflare Web Analytics -->
+    {
+      isProd && (
+        <script
+          defer
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token": "b37753698e6e4212bf721cbe0e8411a4"}'
+        />
+      )
+    }<!-- End Cloudflare Web Analytics -->
   </body>
 </html>
