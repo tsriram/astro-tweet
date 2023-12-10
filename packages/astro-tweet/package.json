@@ -24,7 +24,7 @@
     "prettier-plugin-astro": "^0.12.1"
   },
   "peerDependencies": {
-    "astro": "^3.0.0"
+    "astro": "^4.0.0"
   },
   "dependencies": {
     "@astrojs/check": "^0.3.1",
