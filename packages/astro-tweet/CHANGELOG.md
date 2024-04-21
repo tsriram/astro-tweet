@@ -1,5 +1,11 @@
 # astro-tweet
 
+## 0.0.4
+
+### Patch Changes
+
+- d824959: Add support for Astro 4
+
 ## 0.0.3
 
 ### Patch Changes
