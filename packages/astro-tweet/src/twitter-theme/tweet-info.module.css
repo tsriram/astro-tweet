@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   color: var(--tweet-font-color-secondary);
-  margin-top: 0.125rem;
+  margin-block-start: 0.125rem;
   overflow-wrap: break-word;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -12,14 +12,14 @@
   text-decoration: none;
 }
 .infoLink {
-  height: var(--tweet-actions-icon-wrapper-size);
-  width: var(--tweet-actions-icon-wrapper-size);
+  block-size: var(--tweet-actions-icon-wrapper-size);
+  inline-size: var(--tweet-actions-icon-wrapper-size);
   font: inherit;
-  margin-left: auto;
+  margin-inline-start: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: -4px;
+  margin-inline-end: -4px;
   border-radius: 9999px;
   transition-property: background-color;
   transition-duration: 0.2s;
@@ -30,7 +30,7 @@
 .infoIcon {
   color: inherit;
   fill: currentColor;
-  height: var(--tweet-actions-icon-size);
+  block-size: var(--tweet-actions-icon-size);
   user-select: none;
 }
 .infoLink:hover > .infoIcon {

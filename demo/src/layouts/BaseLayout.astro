@@ -7,6 +7,7 @@ const isProd = import.meta.env.PROD;
 <html>
   <head>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/style.css" />
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -61,6 +62,20 @@ const isProd = import.meta.env.PROD;
       <slot />
     </main>
     <footer class="flex flex-col items-center gap-4 mt-12">
+      <div>
+        Inline direction:
+        <input type="checkbox" id="rtl" />
+        <label for="rtl">Right to Left</label>
+      </div>
+      <div>
+        Block direction:
+        <input type="radio" id="horizontal" name="layout" value="horizontal" />
+        <label for="horizontal">Horizontal</label>
+        <input type="radio" id="vertical-lr" name="layout" value="vertical-lr" />
+        <label for="vertical-lr">Vertical LR</label>
+        <input type="radio" id="vertical-rl" name="layout" value="vertical-rl" />
+        <label for="vertical-rl">Vertical RL</label>
+      </div>
       <div>
         The source code is available on <a
           class="dark:text-pink-500 text-blue-700"

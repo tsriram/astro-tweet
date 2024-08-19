@@ -1,0 +1,11 @@
+body:has(input#rtl:checked) {
+  direction: rtl;
+}
+
+body:has(input#vertical-lr:checked) {
+  writing-mode: vertical-lr;
+}
+
+body:has(input#vertical-rl:checked) {
+  writing-mode: vertical-rl;
+}
