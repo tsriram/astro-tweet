@@ -2,9 +2,9 @@
   display: flex;
   align-items: center;
   color: var(--tweet-font-color-secondary);
-  padding-top: 0.25rem;
-  margin-top: 0.25rem;
-  border-top: var(--tweet-border);
+  padding-block-start: 0.25rem;
+  margin-block-start: 0.25rem;
+  border-block-start: var(--tweet-border);
   overflow-wrap: break-word;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -17,7 +17,7 @@
   color: inherit;
   display: flex;
   align-items: center;
-  margin-right: 1.25rem;
+  margin-inline-end: 1.25rem;
 }
 .like:hover,
 .reply:hover,
@@ -34,18 +34,18 @@
 .likeIconWrapper,
 .replyIconWrapper,
 .copyIconWrapper {
-  width: var(--tweet-actions-icon-wrapper-size);
-  height: var(--tweet-actions-icon-wrapper-size);
+  inline-size: var(--tweet-actions-icon-wrapper-size);
+  block-size: var(--tweet-actions-icon-wrapper-size);
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: -0.25rem;
+  margin-inline-start: -0.25rem;
   border-radius: 9999px;
 }
 .likeIcon,
 .replyIcon,
 .copyIcon {
-  height: var(--tweet-actions-icon-size);
+  block-size: var(--tweet-actions-icon-size);
   fill: currentColor;
   user-select: none;
 }
@@ -58,7 +58,7 @@
   font-size: var(--tweet-actions-font-size);
   font-weight: var(--tweet-actions-font-weight);
   line-height: var(--tweet-actions-line-height);
-  margin-left: 0.25rem;
+  margin-inline-start: 0.25rem;
 }
 
 .reply:hover > .replyIconWrapper {

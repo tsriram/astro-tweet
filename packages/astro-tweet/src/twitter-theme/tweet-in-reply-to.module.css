@@ -3,7 +3,7 @@
   color: var(--tweet-font-color-secondary);
   font-size: 0.9375rem;
   line-height: 1.25rem;
-  margin-bottom: 0.25rem;
+  margin-block-end: 0.25rem;
   overflow-wrap: break-word;
   white-space: pre-wrap;
 }

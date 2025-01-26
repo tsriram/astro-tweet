@@ -5,5 +5,6 @@
   margin: var(--tweet-quoted-body-margin);
   overflow-wrap: break-word;
   white-space: pre-wrap;
-  padding: 0 0.75rem;
+  padding-block: 0;
+  padding-inline: 0.75rem;
 }

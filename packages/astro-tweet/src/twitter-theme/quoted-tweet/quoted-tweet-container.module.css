@@ -1,5 +1,5 @@
 .root {
-  width: 100%;
+  inline-size: 100%;
   overflow: hidden;
   border: var(--tweet-border);
   border-radius: 12px;

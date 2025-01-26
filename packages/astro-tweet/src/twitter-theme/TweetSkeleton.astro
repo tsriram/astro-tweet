@@ -5,19 +5,19 @@ import styles from "./tweet-skeleton.module.css";
 ---
 
 <TweetContainer className={styles.root}>
-  <Skeleton style={{ height: "3rem", marginBottom: "0.75rem" }} />
-  <Skeleton style={{ height: "6rem", margin: "0.5rem 0" }} />
-  <div style={{ borderTop: "var(--tweet-border)", margin: "0.5rem 0" }}></div>
+  <Skeleton style={{ blockSize: "3rem", marginBlockEnd: "0.75rem" }} />
+  <Skeleton style={{ blockSize: "6rem", margin: "0.5rem 0" }} />
+  <div style={{ borderBlockStart: "var(--tweet-border)", marginBlock: "0.5rem", marginInline: "0" }}></div>
   <Skeleton
     style={{
-      height: "2rem",
+      blockSize: "2rem",
     }}
   />
   <Skeleton
     style={{
-      height: "2rem",
+      blockSize: "2rem",
       borderRadius: "9999px",
-      marginTop: "0.5rem",
+      marginBlockStart: "0.5rem",
     }}
   />
 </TweetContainer>

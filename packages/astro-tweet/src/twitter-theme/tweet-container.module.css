@@ -1,7 +1,7 @@
 .root {
-  width: 100%;
-  min-width: 250px;
-  max-width: 550px;
+  inline-size: 100%;
+  min-inline-size: 250px;
+  max-inline-size: 550px;
   overflow: hidden;
   /* Base font styles */
   color: var(--tweet-font-color);
@@ -21,5 +21,6 @@
 .article {
   position: relative;
   box-sizing: inherit;
-  padding: 0.75rem 1rem;
+  padding-block: 0.75rem;
+  padding-inline: 1rem;
 }
