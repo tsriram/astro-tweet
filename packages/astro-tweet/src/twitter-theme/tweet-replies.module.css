@@ -1,5 +1,6 @@
 .replies {
-  padding: 0.25rem 0;
+  padding-block: 0.25rem;
+  padding-inline: 0;
 }
 .link {
   text-decoration: none;
@@ -7,13 +8,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 32px;
-  min-height: 32px;
+  min-inline-size: 32px;
+  min-block-size: 32px;
   user-select: none;
   outline-style: none;
   transition-property: background-color;
   transition-duration: 0.2s;
-  padding: 0 1rem;
+  padding-block: 0;
+  padding-inline: 1rem;
   border: var(--tweet-border);
   border-radius: 9999px;
 }

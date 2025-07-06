@@ -1,5 +1,5 @@
 .root {
-  margin-top: 0.75rem;
+  margin-block-start: 0.75rem;
   overflow: hidden;
   position: relative;
 }
@@ -11,8 +11,8 @@
   display: grid;
   grid-auto-rows: 1fr;
   gap: 2px;
-  height: 100%;
-  width: 100%;
+  block-size: 100%;
+  inline-size: 100%;
 }
 .grid2Columns {
   grid-template-columns: repeat(2, 1fr);
@@ -25,8 +25,8 @@
 }
 .mediaContainer {
   position: relative;
-  height: 100%;
-  width: 100%;
+  block-size: 100%;
+  inline-size: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,17 +36,17 @@
   outline-style: none;
 }
 .skeleton {
-  padding-bottom: 56.25%;
-  width: 100%;
+  padding-block-end: 56.25%;
+  inline-size: 100%;
   display: block;
 }
 .image {
   position: absolute;
-  top: 0px;
-  left: 0px;
-  bottom: 0px;
-  height: 100%;
-  width: 100%;
+  inset-block-start: 0px;
+  inset-inline-start: 0px;
+  inset-block-end: 0px;
+  block-size: 100%;
+  inline-size: 100%;
   margin: 0;
   object-fit: cover;
   object-position: center;
