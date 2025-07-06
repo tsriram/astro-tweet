@@ -1,5 +1,11 @@
 # astro-tweet
 
+## 0.0.5
+
+### Patch Changes
+
+- 12f7500: Support for Astro 5
+
 ## 0.0.4
 
 ### Patch Changes
