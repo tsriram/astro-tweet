@@ -70,6 +70,7 @@ export async function getTweet(
   const isJson = res.headers.get("content-type")?.includes("application/json");
   const data = isJson ? await res.json() : undefined;
 
+  if (res.ok && data.__typename === "TweetTombstone") throw new TwitterApiError({ message: "This tweet is unavailable.", status: res.status, data });
   if (res.ok) return data;
   if (res.status === 404) return;
 
