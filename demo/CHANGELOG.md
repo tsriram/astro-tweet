@@ -1,5 +1,12 @@
 # demo
 
+## 0.0.6
+
+### Patch Changes
+
+- Updated dependencies [d4c5d21]
+  - astro-tweet@0.0.6
+
 ## 0.0.5
 
 ### Patch Changes

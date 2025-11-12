@@ -1,5 +1,11 @@
 # astro-tweet
 
+## 0.0.6
+
+### Patch Changes
+
+- d4c5d21: Handle TweetTombstone result coming from Twitter API.
+
 ## 0.0.5
 
 ### Patch Changes
