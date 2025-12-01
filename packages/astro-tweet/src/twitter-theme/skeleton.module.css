@@ -1,6 +1,6 @@
 .skeleton {
   display: block;
-  width: 100%;
+  inline-size: 100%;
   border-radius: 5px;
   background-image: var(--tweet-skeleton-gradient);
   background-size: 400% 100%;

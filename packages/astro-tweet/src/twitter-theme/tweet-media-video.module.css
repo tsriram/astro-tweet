@@ -2,7 +2,8 @@
   display: flex;
   align-items: center;
   color: white;
-  padding: 0 1rem;
+  padding-block: 0;
+  padding-inline: 1rem;
   border: 1px solid transparent;
   border-radius: 9999px;
   font-weight: 700;
@@ -16,8 +17,8 @@
 }
 .videoButton {
   position: relative;
-  height: 67px;
-  width: 67px;
+  block-size: 67px;
+  inline-size: 67px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,22 +34,22 @@
   background-color: var(--tweet-color-blue-primary-hover);
 }
 .videoButtonIcon {
-  margin-left: 3px;
-  width: calc(50% + 4px);
-  height: calc(50% + 4px);
-  max-width: 100%;
+  margin-inline-start: 3px;
+  inline-size: calc(50% + 4px);
+  block-size: calc(50% + 4px);
+  max-inline-size: 100%;
   color: #fff;
   fill: currentColor;
   user-select: none;
 }
 .watchOnTwitter {
   position: absolute;
-  top: 12px;
-  right: 8px;
+  inset-block-start: 12px;
+  inset-inline-end: 8px;
 }
 .watchOnTwitter > a {
-  min-width: 2rem;
-  min-height: 2rem;
+  min-inline-size: 2rem;
+  min-block-size: 2rem;
   font-size: 0.875rem;
   line-height: 1rem;
   backdrop-filter: blur(4px);
@@ -59,7 +60,7 @@
 }
 .viewReplies {
   position: relative;
-  min-height: 2rem;
+  min-block-size: 2rem;
   background-color: var(--tweet-color-blue-primary);
   border-color: var(--tweet-color-blue-primary);
   font-size: 0.9375rem;

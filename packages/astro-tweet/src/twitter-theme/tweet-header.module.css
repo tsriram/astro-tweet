@@ -1,6 +1,6 @@
 .header {
   display: flex;
-  padding-bottom: 0.75rem;
+  padding-block-end: 0.75rem;
   line-height: var(--tweet-header-line-height);
   font-size: var(--tweet-header-font-size);
   white-space: nowrap;
@@ -10,12 +10,12 @@
 
 .avatar {
   position: relative;
-  height: 48px;
-  width: 48px;
+  block-size: 48px;
+  inline-size: 48px;
 }
 .avatarOverflow {
-  height: 100%;
-  width: 100%;
+  block-size: 100%;
+  inline-size: 100%;
   position: absolute;
   overflow: hidden;
   border-radius: 9999px;
@@ -24,8 +24,8 @@
   border-radius: 4px;
 }
 .avatarShadow {
-  height: 100%;
-  width: 100%;
+  block-size: 100%;
+  inline-size: 100%;
   transition-property: background-color;
   transition-duration: 0.2s;
   box-shadow: rgb(0 0 0 / 3%) 0px 0px 2px inset;
@@ -35,11 +35,12 @@
 }
 
 .author {
-  max-width: calc(100% - 84px);
+  max-inline-size: calc(100% - 84px);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0 0.5rem;
+  margin-block: 0;
+  margin-inline: 0.5rem;
 }
 .authorLink {
   text-decoration: none;
@@ -80,7 +81,8 @@
   text-decoration-line: underline;
 }
 .separator {
-  padding: 0 0.25rem;
+  padding-block: 0;
+  padding-inline: 0.25rem;
 }
 
 .brand {
@@ -88,8 +90,8 @@
 }
 
 .twitterIcon {
-  width: 23.75px;
-  height: 23.75px;
+  inline-size: 23.75px;
+  block-size: 23.75px;
   color: var(--tweet-twitter-icon-color);
   fill: currentColor;
   user-select: none;

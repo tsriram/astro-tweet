@@ -1,6 +1,7 @@
 .header {
   display: flex;
-  padding: 0.75rem 0.75rem 0 0.75rem;
+  padding: 0.75rem;
+  padding-block-end: 0;
   line-height: var(--tweet-header-line-height);
   font-size: var(--tweet-header-font-size);
   white-space: nowrap;
@@ -10,8 +11,8 @@
 
 .avatar {
   position: relative;
-  height: 20px;
-  width: 20px;
+  block-size: 20px;
+  inline-size: 20px;
 }
 
 .avatarSquare {
@@ -20,7 +21,8 @@
 
 .author {
   display: flex;
-  margin: 0 0.5rem;
+  margin-block: 0;
+  margin-inline: 0.5rem;
 }
 
 .authorText {
@@ -34,5 +36,5 @@
   color: var(--tweet-font-color-secondary);
   text-decoration: none;
   text-overflow: ellipsis;
-  margin-left: 0.125rem;
+  margin-inline-start: 0.125rem;
 }
